@@ -1,6 +1,4 @@
-class AdminSessionsController < ApplicationController
-  skip_before_action :authorize_user, only: [:create]
-  
+class AdminSessionsController < ApplicationController  
   def create
     admin_user = AdminUser.find_by(username: params[:username])
     if admin_user&.authenticate(params[:password]) #If user exists and user is authenticated '&.' 

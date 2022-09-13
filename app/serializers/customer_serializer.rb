@@ -1,5 +1,5 @@
 class CustomerSerializer < ActiveModel::Serializer
-  attributes :id, :username, :password
+  attributes :id, :username
   has_one :admin_user
   has_many :tickets
   has_one :contact

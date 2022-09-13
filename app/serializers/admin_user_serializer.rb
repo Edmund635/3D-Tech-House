@@ -1,5 +1,5 @@
 class AdminUserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :password
+  attributes :id, :username
   has_many :customers
   has_many :tickets
   has_many :contacts

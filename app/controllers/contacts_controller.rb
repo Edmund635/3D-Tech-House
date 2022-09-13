@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
     end
 
     def destroy
-        contact = contact.find(params[:id])
+        contact = Contact.find(params[:id])
         contact.destroy
         head :no_content
     end
