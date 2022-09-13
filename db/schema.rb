@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_12_204036) do
+ActiveRecord::Schema.define(version: 2022_09_12_232815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2022_09_12_204036) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin"
@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(version: 2022_09_12_204036) do
     t.bigint "customer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["item_id"], name: "index_orders_on_item_id"
     t.index ["customer_id"], name: "index_orders_on_customer_id"
+    t.index ["item_id"], name: "index_orders_on_item_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -112,8 +112,8 @@ ActiveRecord::Schema.define(version: 2022_09_12_204036) do
   add_foreign_key "contacts", "customers"
   add_foreign_key "customers", "admin_users"
   add_foreign_key "founders", "admin_users"
-  add_foreign_key "orders", "items"
   add_foreign_key "orders", "customers"
+  add_foreign_key "orders", "items"
   add_foreign_key "reviews", "items"
   add_foreign_key "tickets", "customers"
 end

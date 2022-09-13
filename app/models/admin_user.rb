@@ -5,4 +5,7 @@ class AdminUser < ApplicationRecord
     has_many :orders, through: :customers
     has_one :about
     has_one :founder
+
+    has_secure_password
+    validates :username, presence: true, uniqueness: true
 end

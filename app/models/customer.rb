@@ -1,7 +1,7 @@
 class Customer < ApplicationRecord
   has_many :tickets
   has_one :contacts
-  has_many :orders
+  has_many :orders, dependent: :destroy
   has_many :items, through: :orders
   belongs_to :admin_user
   

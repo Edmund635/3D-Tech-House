@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_errors
   
   def is_authorized? 
-    permitted = current_user.admin?
+    permitted = current_admin_user.admin?
     render json: { errors: { User: "No admin access" }}, status: :forbidden unless permitted
   end
   
@@ -13,6 +13,10 @@ class ApplicationController < ActionController::API
 
   def current_user
     @current_user ||= Customer.find_by_id(session[:customer_id])
+  end
+
+  def current_admin_user
+    @current_admin_user ||= AdminUser.find_by_id(session[:admin_user_id])
   end
 
   def authorize_user
