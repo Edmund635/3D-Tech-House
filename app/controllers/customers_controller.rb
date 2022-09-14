@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-    skip_before_action :authorize_user, only: [:create]
+    # skip_before_action :authorize_user, only: [:create]
     def create
         customer = Customer.create!(created_params)
         session[:customer_id] = customer.id

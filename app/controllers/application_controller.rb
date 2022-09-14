@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  before_action :authorize_user
+  # before_action :authorize_user
   include ActionController::Cookies
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_error
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_errors

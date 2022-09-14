@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    skip_before_action :authorize_user
+    # skip_before_action :authorize_user
     def create
         review = Review.create!(created_params)
         render json: review, status: :created

@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-    skip_before_action :authorize_user
+    # skip_before_action :authorize_user
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_error
     def index
         render json: Item.all
@@ -16,5 +16,4 @@ class ItemsController < ApplicationController
     def render_not_found_error
         render json: {error: "Course not found"}, status: 404
     end
-end
 end
