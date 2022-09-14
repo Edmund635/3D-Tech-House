@@ -7,8 +7,8 @@ import SignUp from './SignUp';
 import Login from './Login'
 import Navigation from './Navigation'
 import ItemDetails from './ItemDetails';
-// import Contact from './Contact';
-// import EditContact from './EditContact';
+import ContactDetails from './ContactDetails';
+import EditContact from './EditContact';
 
 
 function App() {
@@ -59,13 +59,14 @@ function App() {
       <Route exact path="/items/:id">
         <ItemDetails />
       </Route>
-      {/* <Route exact path="/contact/new">
-        <Contact currentUser={currentUser}/>
+      <Route exact path="/:id/contact/">
+        <ContactDetails currentUser={currentUser}/> 
       </Route>
 
-      <Route exact path="/:id/contact">
+      <Route exact path="/:id/contact/new">
         <EditContact currentUser={currentUser}/>
-      </Route> */}
+      </Route>
+
       </Switch>
     </>
   )

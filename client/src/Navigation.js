@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import {useHistory} from 'react-router-dom';
+import MacanaLogo from './MacanaLogo.jpeg'
+
 
 
 function Navigation({ updateUser, currentUser }) {
@@ -18,6 +20,13 @@ function Navigation({ updateUser, currentUser }) {
       <header className="headerbackground">
         <nav>
         <div className="navbar">
+        <NavLink exact className="Home" to="/">
+            <div>
+                <h2>Macana Manufacturing</h2>
+                {/* <img src={MacanaLogo} alt="MacanaLogo" style={{width:80, height: 'auto'}} /> */}
+            </div>
+        </NavLink>
+
             {currentUser ? <NavLink exact className = "button" to={`/users/${currentUser.id}`}>Account</NavLink> : null }
             <NavLink exact className="button" to="/">
               Inventory
@@ -28,7 +37,7 @@ function Navigation({ updateUser, currentUser }) {
             {currentUser ? null : <NavLink exact className="button" to="/login">
               Login
             </NavLink> }
-            {currentUser ? <NavLink exact className="button" to= {`/contact/new`}> Contact </NavLink> : null }
+            {currentUser ? <NavLink exact className="button" to= {`/${currentUser.id}/contact`}> Contact </NavLink> : null }
             {currentUser ? <button onClick={handleLogOut}>Log Out</button> : null}
           </div>
         </nav>

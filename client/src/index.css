@@ -1,10 +1,12 @@
 body {
   margin: 0;
+  padding: 0;  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://img.freepik.com/free-photo/forklift-truck-agv-robots-efficiently-sorting-hundreds-parcels-per-hour-automated-guided-vehicle-agv-3d-rendering_41470-4100.jpg?w=1800&t=st=1663174955~exp=1663175555~hmac=fa6ac52b228d3a4e20847d5494c09fbd6fe0437915df667c1d5affb0b7a05913");
 }
 
 code {
@@ -14,16 +16,33 @@ code {
 
 .headerbackground{
   width: 100%;
-}
+  background-color: black;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
 
+}
+/* 
 .signup{
   text-align: center;
   position: relative;
-}
+} */
+
+.headerbackground h2{
+  width: 100%;
+  background-color: black;
+  color: #f2f2f2;
+  display: inline-block;
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;}
 
 .navbar {
   width: 100%;
-  display: flex;
+  display: inline;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   font-size: 25px;
@@ -32,9 +51,9 @@ code {
 }
 
 .navbar .button{
-  width: 100%;
+  width: 20%;
   background-color: black;
-  display: inline;
+  display: inline-block;
   color: #f2f2f2;
   text-align: center;
   
@@ -60,11 +79,119 @@ code {
 }
 
 .itemCard{
-  border: solid;
-  padding: 2%;
+  border-radius: 100px;
+  background-image: linear-gradient(to bottom, wheat , white);
+  padding: 20px;
+  width: 200px;
+  height: 150px;  
+  color: white;
 }
 
 .card {
   position: relative;
   justify-content: flex-start;
+  background-image: url("https://img.freepik.com/free-photo/forklift-truck-agv-robots-efficiently-sorting-hundreds-parcels-per-hour-automated-guided-vehicle-agv-3d-rendering_41470-4100.jpg?w=1800&t=st=1663174955~exp=1663175555~hmac=fa6ac52b228d3a4e20847d5494c09fbd6fe0437915df667c1d5affb0b7a05913");
+
+}
+
+.login{  
+  width: 500px;  
+  overflow: hidden;  
+  margin: auto;  
+  margin: 20 0 0 450px;  
+  padding: 125px;  
+  background-color: wheat;  
+  border-radius: 25px ;
+    
+}  
+.header-login{  
+text-align: center;  
+color: #000000;  
+padding: 2px;
+margin: auto;  
+/* background-image: linear-gradient(to right, indigo , blue); */
+}  
+.label{  
+color: #000000;  
+font-size: 17px;  
+} 
+
+.errors {
+  color: #ff0825;  
+}
+
+#Uname{  
+width: 200px;  
+height: 30px;  
+border: none;  
+border-radius: 3px;  
+padding-left: 8px;  
+}  
+#Pass{  
+width: 200px;  
+height: 30px;  
+border: none;  
+border-radius: 3px;  
+padding-left: 8px;  
+
+}  
+#log{  
+width: 200px;  
+height: 30px;  
+border: none;  
+border-radius: 17px;  
+padding-left: 7px;  
+color: rgb(0, 0, 0);  
+}  
+
+span{  
+color: rgb(3, 0, 0);  
+font-size: 17px;  
+}  
+.a-tag{  
+float: left;  
+}
+
+.update{
+  width: 20%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.contact {
+  text-align: center;
 }

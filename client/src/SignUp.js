@@ -46,21 +46,28 @@ function SignUp({updateUser}) {
       }
     return (
         <> 
-        <form className='signup' onSubmit={onSubmit}>
-        <label>
-            Username
-        </label>
-        <input type='text' name='username' value={username} onChange={handleChange} />
-       
-        <label>
-            Password
-        </label>
-        <input type='password' name='password' value={password} onChange={handleChange} />
-        
-       
-        <input type='submit' value='Sign up!' />
-        </form>
-        {errors ? <div>{errors}</div> :null}
+        <br></br> 
+        <br></br> 
+        <div class="login">
+        <h2 class="header-login">Sign Up </h2>          
+        <form onSubmit={onSubmit} id="login" > 
+        <label class='label'><b>
+          Username 
+          </b></label>
+        <input type='text' name='username' id= "Uname"value={username} onChange={handleChange} />
+      
+        <label class='label'><b>
+         Password
+         </b></label>
+        <input type='password' name='password' id= "Pass" value={password} onChange={handleChange} />
+        <br></br>
+        <br></br>
+        <input type='submit' name="log" id="log" value='Sign Up' />
+        <br></br>
+      </form>
+      <br></br>
+      {errors? <div class="errors"><b>{errors}</b></div>:null}
+      </div>
         </>
     )
 }

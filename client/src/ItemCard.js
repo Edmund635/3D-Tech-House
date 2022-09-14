@@ -7,8 +7,9 @@ function ItemCard({item}) {
     return (
       <div className='itemCard'>
         <Link to={`/items/${id}`}> <h2>{name}</h2></Link>
+        <br></br>
       </div>
-     
+
     );
   }
   
