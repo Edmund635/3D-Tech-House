@@ -12,7 +12,7 @@ function EditContact({currentUser}) {
         email:'',
         address:'',
         phone_number:'',
-        user_id: currentUser.id
+        customer_id: currentUser.id
       })
   const [errors, setErrors] = useState([])
   const [ContactInfo, setContactInfo] = useState([]);
@@ -67,7 +67,7 @@ function EditContact({currentUser}) {
             <label> First Name</label>
             <input type='text' name='first_name' value={formData.first_name} onChange={handleChange} />
       
-            <label>Address</label>
+            <label>Shipping Address</label>
             <textarea type='text' name='address' value={formData.address} onChange={handleChange} />
       
             <label>Email</label>
@@ -76,7 +76,7 @@ function EditContact({currentUser}) {
             <label>Phone Number</label>
             <input type='text' name='phone_number' value={formData.phone_number} onChange={handleChange} />
       
-            <input type='submit' value='Update Contact Information' />
+            <input class='submit' type='submit' value='Update Contact Information' />
         </form>
         {errors?errors.map(e => <h2 style={{color:'red'}}>{e.toUpperCase()}</h2>):null}
     </div>

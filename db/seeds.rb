@@ -48,6 +48,11 @@ item2 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstati
 item3 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
 item4 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
 item5 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
+item6 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
+item7 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
+item8 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
+item9 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
+item10 = Item.create(name: 'Bull print', price: 20, image: 'https://cdna.artstation.com/p/marketplace/presentation_assets/000/250/704/large/file.jpg?1576054408')
 
 
 #Orders

@@ -29,7 +29,7 @@ function CourseDetails() {
 
     const { image, price, name  } = item
     return(
-        <div className="card">
+        <div class="itemDetails">
             <p>Item Name: {name}</p>
             <p>Item Price: {price}</p>
             <p><img src={image} alt={name} /></p>

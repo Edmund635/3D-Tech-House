@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import {useHistory, Link, useParams} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 
 
 function Contact({currentUser}) {
@@ -9,12 +9,11 @@ function Contact({currentUser}) {
     email:'',
     phone_number:'',
     address: '',
-    user_id: currentUser.id
+    customer_id: currentUser.id
   })
   const [errors, setErrors] = useState([])
   const [ContactInfo, setContactInfo] = useState([]);
   const history = useHistory();
-  const {id} = useParams()
 
 
   
@@ -48,24 +47,7 @@ function Contact({currentUser}) {
     })
     }
 
-    const deleteContact = (id) => setContactInfo(current => current.filter(p => p.id !== id)) 
-
-
-    function handleDelete(){
-      fetch(`/contacts/${id}`,{
-        method:'DELETE',
-        headers: {'Content-Type': 'application/json'}
-      })
-      .then(res => {
-        if(res.ok){
-          deleteContact(id)
-          history.push(`/users/${currentUser.id}`)
-        } else {
-          res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
-        }
-      })
-    }
-
+    
     return (
       <div className='container'>
       {/* {errors ? <div>errors</div> : null} */}
@@ -76,7 +58,7 @@ function Contact({currentUser}) {
         <label> First Name</label>
         <input type='text' name='first_name' value={formData.first_name} onChange={handleChange} />
       
-        <label>Address</label>
+        <label>Shipping Address</label>
         <textarea type='text' name='address' value={formData.address} onChange={handleChange} />
       
         <label>Email</label>
@@ -85,11 +67,9 @@ function Contact({currentUser}) {
         <label>Phone Number</label>
         <input type='text' name='phone_number' value={formData.phone_number} onChange={handleChange} />
       
-        <input type='submit' value='Add Contact Information' />
+        <input class='submit'type='submit' value='Add Contact Information' />
       </form>
       <br></br>
-      <br></br>
-      <button onClick={handleDelete}>Delete Contact Info</button>
       
       </div>
     )
